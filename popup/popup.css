@@ -1,9 +1,6 @@
 #popup-content{
 	width: 400px;
-}
-
-#navbar{
-	width: 100%;
+	padding: 1px;
 }
 
 .content-wrapper{
@@ -16,25 +13,39 @@
 
 .modified-nav-wrapper{
 	display: flex;
-}
-
-.ruler{
 	width: 100%;
-	height: 1px;
-	border: 1px yellow dashed;
 }
 
 .modified-card {
+	user-select: none;
+        -moz-user-select: none;
+        -khtml-user-select: none;
+        -webkit-user-select: none;
+        -o-user-select: none;
 	height: 100px;
 	display: flex;
-	border: black 1px dashed;
+	align-items: center;
+}
+
+.modified-card:hover {
+	cursor: help;
+	background-color: #fff3e0;
+	transition: ease-in-out 0.2s all;
 }
 
 .logo{
 	height: 60px;
 	width: 60px;
+	margin: 20px;
 }
 
 .modified-card-title {
-	font-size: 16px;
+	font-size: 20px;
+	font-family: 'Roboto';
+	margin: 20px;
+}
+
+.modified-badge {
+	right: 0px;
+	margin: 20px;
 }
