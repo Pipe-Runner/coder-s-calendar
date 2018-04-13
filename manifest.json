@@ -1,0 +1,24 @@
+{
+	"manifest_version": 2,
+	"name": "Coder's Calendar",
+	"version": "1.0",
+	"description": "A Firefox web extension to notify users of ongoing and upcomming contests on various coding platforms",
+	"icons": {
+		"32": "icons/code.svg",
+		"48": "icons/code.svg",
+		"96": "icons/code.svg"
+	},
+	"permissions": [
+		"activeTab"
+	],
+	"browser_action": {
+		"default_icon": "icons/code.svg",
+		"default_title": "Coder's calendar",
+		"default_popup": "popup/index.html"
+	},
+	"web_accessible_resources": [
+		"beasts/frog.jpg",
+		"beasts/turtle.jpg",
+		"beasts/snake.jpg"
+	]
+}
