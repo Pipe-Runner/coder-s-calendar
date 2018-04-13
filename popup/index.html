@@ -3,19 +3,39 @@
 <head>
 	<meta charset="utf-8">
 	<link rel="stylesheet" href="popup.css" />
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<link type="text/css" rel="stylesheet" href="materialize.min.css" media="screen,projection" />
 </head>
 
 <body>
 	<div id="popup-content">
-		<div id="navbar">
-			bar
+		<div id="navbar" class="modified-nav-wrapper nav-wrapper z-depth-1">
+			<a id="back" style="margin:4px;" class="waves-effect pink darken-1 darken-2 btn-small">
+				<i class="material-icons medium">arrow_back</i>
+			</a>
+			<div class="spacer">
+			</div>
+			<a id="refresh" style="margin:4px;" class="waves-effect light-blue darken-2 btn-small">
+				<i class="material-icons medium">autorenew</i>
+			</a>
 		</div>
-		<div id="main-content">Frog</div>
+		<div id="main-content" class="content-wrapper">
+
+			<div id="menu-1">
+				<!-- main selection -->
+			</div>
+
+			<div id="menu-2">
+				<!-- selected option list -->
+			</div>
+		</div>
 	</div>
 	<!-- <div id="error-content" class="hidden">
     <p>Can't beastify this web page.</p><p>Try a different page.</p>
   </div> -->
-	<script src="popup.js"></script>
 </body>
+<script type="text/javascript" src="materialize.min.js"></script>
+<script src="api.js"></script>
+<script src="popup.js"></script>
 
 </html>
