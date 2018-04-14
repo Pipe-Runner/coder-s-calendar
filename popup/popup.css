@@ -1,3 +1,11 @@
+#popup-container{
+	width: 400px;
+	/* padding: 1px; */
+	overflow: hidden;
+	position: relative;
+	max-height: 446px;
+}
+
 #loading{
 	width: 400px;
 	position: absolute;
@@ -12,19 +20,10 @@
 	height: 46px;
 }
 
-
-#popup-content{
-	width: 400px;
-	padding: 1px;
-	overflow: hidden;
-	position: relative;
-	max-height: 500px;
-}
-
 .content-wrapper{
-	max-height: 400px;
+	height: 400px;
 	background-color: #eeeeee;
-	overflow-Y: auto;
+	overflow-Y: none;
 }
 
 .spacer{
@@ -46,23 +45,28 @@
 
 .modified-card:hover {
 	cursor: grab;
-	background-color: #fff3e0;
+	background-color: #84ffff;
 	transition: ease-in-out 0.2s all;
 }
 
 .logo{
 	height: 60px;
 	width: 60px;
-	margin: 20px;
+	margin: 0px 0px 0px 20px;
 }
 
 .modified-card-title {
 	font-size: 20px;
 	font-family: 'Roboto';
-	margin: 20px;
+	margin: 0px 0px 0px 28px;
 }
 
 .modified-badge {
 	right: 0px;
 	margin: 20px;
+}
+
+#menu-2 {
+	height: 400px;
+	overflow-Y: auto;
 }

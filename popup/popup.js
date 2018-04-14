@@ -11,12 +11,13 @@ const refresh = () => {
 	codeforcesApiCall();
 }
 
+// initializing data
 refresh();
 
-// binding functions to elements
+// binding refresh functions to element
 document.getElementById('refresh').addEventListener('click', refresh);
 
-// menu control vars
+// menu controls
 let menu = 1;
 
 const back = () => {
@@ -49,7 +50,7 @@ const changeMenu = (menuNumber, siteType = null) => () => {
 document.getElementById('back').addEventListener('click', back);
 document.getElementById('codeforces-main').addEventListener('click', changeMenu(2, "codeforces"));
 
-// data displaying
+// data structuring into object and badge setting
 let data = {
 	"codeforces": []
 }
@@ -78,13 +79,14 @@ const loadDataInMenu = (siteType) => {
 				startTime = new Date(item.startTimeSeconds * 1000);
 				duration = new Date(item.durationSeconds * 1000);
 
-				innerHTML += `<li class="collection-item avatar">
-					<i class="material-icons circle green">insert_chart</i>
-					<span class="title">${item.name}</span>
-					<p>${duration.getUTCHours()} hrs <br>
-					${startTime.getDate()} ${months[startTime.getMonth()]} ${startTime.getFullYear()}
-					</p>
-			  	</li>`
+				innerHTML +=
+					`<a class="collection-item avatar">
+						<i class="material-icons circle green">insert_chart</i>
+						<span class="title">${item.name}</span>
+						<p>${duration.getUTCHours()} hrs <br>
+						${startTime.getDate()} ${months[startTime.getMonth()]} ${startTime.getFullYear()} ${startTime.getHours()}:${startTime.getMinutes()}
+						</p>
+			  		</a>`
 			});
 			document.getElementById('contest-details').innerHTML = innerHTML;
 			break;
