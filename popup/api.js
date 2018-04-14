@@ -11,6 +11,7 @@ const codeforcesApiCall = () => {
 			const contestList = JSON.parse(codeforcesApi.response);
 			const filteredList = contestList.result.filter(item => item.phase === 'BEFORE')
 			console.log(filteredList);
+			updateData("codeforces", filteredList);
 		}
 		else {
 			alert('Error ' + codeforcesApi.status);

@@ -1,3 +1,7 @@
+.hide {
+	opacity: 0;
+}
+
 #popup-content{
 	width: 400px;
 	padding: 1px;
@@ -5,6 +9,7 @@
 
 .content-wrapper{
 	height: 400px;
+	background-color: #eeeeee;
 }
 
 .spacer{
@@ -22,9 +27,10 @@
         -khtml-user-select: none;
         -webkit-user-select: none;
         -o-user-select: none;
-	height: 100px;
+	height: 96px;
 	display: flex;
 	align-items: center;
+	margin: 4px 0px 0px 0px;
 }
 
 .modified-card:hover {
