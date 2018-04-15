@@ -2,7 +2,6 @@
 let menu = 1;
 
 const back = () => {
-	console.log("hit");
 	menu--;
 	changeMenu(menu)();
 }

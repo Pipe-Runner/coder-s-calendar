@@ -6,7 +6,6 @@ const loading = (isLoading) => {
 // loading var set to true by default
 const refresh = () => {
 	loading(true);
-	codeforcesApiCall();
 	fetchAllApiCall();
 }
 
@@ -23,10 +22,10 @@ let contestList = {
 const updateData = (apiResponse) => {
 
 	// ongoing set of contests
-	ongoing = apiResponse.ongoing;
+	let ongoing = apiResponse.ongoing;
 
 	// upcoming set of contests
-	upcoming = apiResponse.upcoming;
+	let upcoming = apiResponse.upcoming;
 
 	ongoing.map(item => {
 		switch (item.Platform) {
@@ -210,8 +209,6 @@ const updateData = (apiResponse) => {
 		}
 	})
 
-	console.log(contestList);
-
 	// setting badge
 	if (contestList.codeforces.length > 0) {
 		document.getElementById("codeforces-badge").style.display = "block";
@@ -219,5 +216,29 @@ const updateData = (apiResponse) => {
 	}
 	else {
 		document.getElementById("codeforces-badge").style.display = "none";
+	}
+
+	if (contestList.codechef.length > 0) {
+		document.getElementById("codechef-badge").style.display = "block";
+		document.getElementById("codechef-badge").innerHTML = contestList.codechef.length;
+	}
+	else {
+		document.getElementById("codechef-badge").style.display = "none";
+	}
+
+	if (contestList.hackerrank.length > 0) {
+		document.getElementById("hackerrank-badge").style.display = "block";
+		document.getElementById("hackerrank-badge").innerHTML = contestList.hackerrank.length;
+	}
+	else {
+		document.getElementById("hackerrank-badge").style.display = "none";
+	}
+
+	if (contestList.hackerearth.length > 0) {
+		document.getElementById("hackerearth-badge").style.display = "block";
+		document.getElementById("hackerearth-badge").innerHTML = contestList.hackerearth.length;
+	}
+	else {
+		document.getElementById("hackerearth-badge").style.display = "none";
 	}
 }

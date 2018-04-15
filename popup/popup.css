@@ -92,7 +92,6 @@
 }
 
 .contest-details-card:hover {
-	cursor: grab;
 	background-color: #84ffff;
 	transition: ease-in-out 0.2s all;
 }
