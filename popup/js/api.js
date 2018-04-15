@@ -8,7 +8,24 @@ const codeforcesApiCall = () => {
 			const contestList = JSON.parse(codeforcesApi.response);
 			const filteredList = contestList.result.filter(item => item.phase === 'BEFORE')
 			console.log(filteredList);
-			updateData("codeforces", filteredList.reverse());
+			// updateData("codeforces", filteredList.reverse());
+		}
+		else {
+			alert('Error ' + codeforcesApi.status);
+		}
+	};
+
+	codeforcesApi.send();
+}
+
+const fetchAllApiCall = () => {
+	var codeforcesApi = new XMLHttpRequest();
+	codeforcesApi.open('GET', 'https://contesttrackerapi.herokuapp.com/');
+	codeforcesApi.onload = function () {
+		if (codeforcesApi.status === 200) {
+			loading(false);
+			const responseObject = JSON.parse(codeforcesApi.response);
+			updateData(responseObject.result);
 		}
 		else {
 			alert('Error ' + codeforcesApi.status);
