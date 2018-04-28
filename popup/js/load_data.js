@@ -33,7 +33,7 @@ const updateData = (apiResponse) => {
 				contestList.codeforces = [
 					...contestList.codeforces,
 					{
-						name: item.Name,
+						name: trim(item.Name),
 						startTime: item.StartTime,
 						endTime: item.EndTime,
 						type: item.challenge_type,
@@ -47,7 +47,7 @@ const updateData = (apiResponse) => {
 				contestList.hackerearth = [
 					...contestList.hackerearth,
 					{
-						name: item.Name,
+						name: trim(item.Name),
 						startTime: item.StartTime,
 						endTime: item.EndTime,
 						type: item.challenge_type,
@@ -61,7 +61,7 @@ const updateData = (apiResponse) => {
 				contestList.hackerrank = [
 					...contestList.hackerrank,
 					{
-						name: item.Name,
+						name: trim(item.Name),
 						startTime: item.StartTime,
 						endTime: item.EndTime,
 						type: item.challenge_type,
@@ -75,7 +75,7 @@ const updateData = (apiResponse) => {
 				contestList.codechef = [
 					...contestList.codechef,
 					{
-						name: item.Name,
+						name: trim(item.Name),
 						startTime: item.StartTime,
 						endTime: item.EndTime,
 						type: item.challenge_type,
@@ -89,7 +89,7 @@ const updateData = (apiResponse) => {
 				contestList.topcoder = [
 					...contestList.topcoder,
 					{
-						name: item.Name,
+						name: trim(item.Name),
 						startTime: item.StartTime,
 						endTime: item.EndTime,
 						type: item.challenge_type,
@@ -103,7 +103,7 @@ const updateData = (apiResponse) => {
 				contestList.other = [
 					...contestList.other,
 					{
-						name: item.Name,
+						name: trim(item.Name),
 						startTime: item.StartTime,
 						endTime: item.EndTime,
 						type: item.challenge_type,
@@ -124,7 +124,7 @@ const updateData = (apiResponse) => {
 				contestList.codeforces = [
 					...contestList.codeforces,
 					{
-						name: item.Name,
+						name: trim(item.Name),
 						startTime: item.StartTime,
 						endTime: item.EndTime,
 						type: item.challenge_type,
@@ -138,7 +138,7 @@ const updateData = (apiResponse) => {
 				contestList.hackerearth = [
 					...contestList.hackerearth,
 					{
-						name: item.Name,
+						name: trim(item.Name),
 						startTime: item.StartTime,
 						endTime: item.EndTime,
 						type: item.challenge_type,
@@ -152,7 +152,7 @@ const updateData = (apiResponse) => {
 				contestList.hackerrank = [
 					...contestList.hackerrank,
 					{
-						name: item.Name,
+						name: trim(item.Name),
 						startTime: item.StartTime,
 						endTime: item.EndTime,
 						type: item.challenge_type,
@@ -166,7 +166,7 @@ const updateData = (apiResponse) => {
 				contestList.codechef = [
 					...contestList.codechef,
 					{
-						name: item.Name,
+						name: trim(item.Name),
 						startTime: item.StartTime,
 						endTime: item.EndTime,
 						type: item.challenge_type,
@@ -180,7 +180,7 @@ const updateData = (apiResponse) => {
 				contestList.topcoder = [
 					...contestList.topcoder,
 					{
-						name: item.Name,
+						name: trim(item.Name),
 						startTime: item.StartTime,
 						endTime: item.EndTime,
 						type: item.challenge_type,
@@ -194,7 +194,7 @@ const updateData = (apiResponse) => {
 				contestList.other = [
 					...contestList.other,
 					{
-						name: item.Name,
+						name: trim(item.Name),
 						startTime: item.StartTime,
 						endTime: item.EndTime,
 						type: item.challenge_type,

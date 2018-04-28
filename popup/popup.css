@@ -25,7 +25,6 @@
 	width: 100%;
 	height: 46px;
 	background-color: #9575cd;
-	/* webkit-box-shadow: 0 8px 17px 2px rgba(0,0,0,0.14),0 3px 14px 2px rgba(0,0,0,0.12),0 5px 5px -3px rgba(0,0,0,0.2); */
 }
 
 .content-wrapper{
@@ -39,16 +38,44 @@
 }
 
 .modified-card {
+	position: relative;
 	user-select: none;
         -moz-user-select: none;
         -khtml-user-select: none;
         -webkit-user-select: none;
         -o-user-select: none;
 	height: 96px;
+	margin: 4px 2px 4px 2px;
+}
+
+.modified-card-cover{
+	width: 100%;
+	height: 100%;
+	position: relative;
 	display: flex;
 	align-items: center;
-	margin: 4px 0px 0px 0px;
-	background-color: #ffffff;
+    background-size: auto;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+.modified-card-cover::before{
+	content: "";
+	position: absolute;
+	top:0;
+	bottom:0;
+	left:0;
+	right: 0;
+	z-index: 1;
+	
+	background: rgba(255,255,255,0.94);
+	background: linear-gradient(to bottom, rgba(255,255,255,0.94) 0%, rgba(246,246,246,0.94) 47%, rgba(237,237,237,0.94) 100%);
+
+}
+
+.modified-card-cover > * {
+	position: relative;
+	z-index: 2;
 }
 
 .modified-card:hover {
@@ -79,16 +106,43 @@
 }
 
 .contest-details-card {
+	position: relative;
 	user-select: none;
         -moz-user-select: none;
         -khtml-user-select: none;
         -webkit-user-select: none;
         -o-user-select: none;
 	height: 152px;
+	margin: 4px 2px 0px 2px;
+}
+
+.contest-details-card-cover{
+	width: 100%;
+	height: 100%;
+	position: relative;
 	display: flex;
 	align-items: center;
-	margin: 4px 0px 0px 0px;
-	background-color: #ffffff;
+    background-size: auto;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+.contest-details-card-cover::before{
+	content: "";
+	position: absolute;
+	top:0;
+	bottom:0;
+	left:0;
+	right: 0;
+	z-index: 1;
+	
+	background: rgba(255,255,255,0.94);
+	background: linear-gradient(to bottom, rgba(255,255,255,0.94) 0%, rgba(246,246,246,0.94) 47%, rgba(237,237,237,0.94) 100%);
+}
+
+.contest-details-card-cover > *{
+	position: relative;
+	z-index: 2;
 }
 
 .contest-details-card:hover {
@@ -96,15 +150,15 @@
 	transition: ease-in-out 0.2s all;
 }
 
+.contest-status {
+	margin: 0px 0px 0px 24px;
+}
+
 .contest-details-wrapper {
-	margin: 0px 0px 0px 16px;
+	margin: 0px 0px 0px 24px;
 	display: flex;
 	flex-direction: column;
 	height: 100%;
-}
-
-.contest-status {
-	margin: 0px 0px 0px 16px;
 }
 
 .contest-details-name {
@@ -122,10 +176,11 @@
 
 .contest-details-date {
 	color: #90a4ae; 
+	top:0;
 }
 
 .contest-details-duration {
 	bottom: 0px;
-	margin: 8px 0px 8px 0px;
+	margin: 24px 0px 8px 0px;
 	color: #d81b60; 
 }
