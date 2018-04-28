@@ -10,16 +10,17 @@ const refresh = () => {
 }
 
 // data structuring into object and badge setting
-let contestList = {
-	"codeforces": [],
-	"hackerearth": [],
-	"codechef": [],
-	"hackerrank": [],
-	"topcoder": [],
-	"other": []
-}
+let contestList = {}
 
 const updateData = (apiResponse) => {
+	contestList = {
+		"codeforces": [],
+		"hackerearth": [],
+		"codechef": [],
+		"hackerrank": [],
+		"topcoder": [],
+		"other": []
+	}
 
 	// ongoing set of contests
 	let ongoing = apiResponse.ongoing;

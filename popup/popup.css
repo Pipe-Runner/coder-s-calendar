@@ -113,7 +113,7 @@
         -webkit-user-select: none;
         -o-user-select: none;
 	height: 152px;
-	margin: 4px 2px 0px 2px;
+	margin: 4px 2px 4px 2px;
 }
 
 .contest-details-card-cover{
@@ -164,7 +164,7 @@
 .contest-details-name {
 	margin: 8px 0px 0px 0px;
 	font-weight: 700;
-	color: #00acc1; 
+	color: #008fa1; 
 }
 
 .contest-details-time-wrapper {
@@ -175,7 +175,7 @@
 }
 
 .contest-details-date {
-	color: #90a4ae; 
+	color: #597b8b; 
 	top:0;
 }
 
